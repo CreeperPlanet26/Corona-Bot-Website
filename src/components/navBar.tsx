@@ -3,6 +3,7 @@ import { Navbar, Form, Button, Modal } from "react-bootstrap";
 import { ControlOutlined } from "@ant-design/icons";
 import { Switch } from "antd";
 import { NavBarProps } from "../interfaces/navBarProps";
+import { Tooltip } from "@material-ui/core";
 
 const NavBar: React.FC<NavBarProps> = ({ onThemeChange, colorTheme }) => {
   const [show, setShow] = useState(false);
@@ -22,7 +23,10 @@ const NavBar: React.FC<NavBarProps> = ({ onThemeChange, colorTheme }) => {
           <Button variant="primary" onClick={handleShow}>
             Help
           </Button>
+
           <ControlOutlined
+            className="test"
+            onClick={() => console.log("icon was clicked")}
             style={
               colorTheme === "dark"
                 ? {
@@ -39,20 +43,22 @@ const NavBar: React.FC<NavBarProps> = ({ onThemeChange, colorTheme }) => {
                   }
             }
           />
-          <Switch
-            defaultChecked
-            checkedChildren="Dark"
-            unCheckedChildren="Light"
-            style={{
-              height: "1.5rem",
-              position: "fixed",
-              right: 175,
-            }}
-            onChange={(on) => {
-              if (on) onThemeChange("dark");
-              if (!on) onThemeChange("light");
-            }}
-          />
+          <Tooltip title="Toogle Theme">
+            <Switch
+              defaultChecked
+              checkedChildren="Dark"
+              unCheckedChildren="Light"
+              style={{
+                height: "1.5rem",
+                position: "fixed",
+                right: 175,
+              }}
+              onChange={(on) => {
+                if (on) onThemeChange("dark");
+                if (!on) onThemeChange("light");
+              }}
+            />
+          </Tooltip>
           <Modal
             style={{
               width: "40rem",

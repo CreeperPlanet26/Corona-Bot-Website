@@ -10,6 +10,7 @@ const CardComponent: React.FC<CardProps> = ({
   return (
     <div>
       <Card
+        className="hover-test"
         text="white"
         bg="warning"
         style={{ width: "18rem", position: "fixed", top: 200, left: 550 }}
@@ -50,7 +51,9 @@ const CardComponent: React.FC<CardProps> = ({
           </Card.Title>
         </Card.Body>
       </Card>
+
       <Card
+        className="hover-test"
         text="white"
         bg="danger"
         style={{ width: "18rem", position: "fixed", top: 200, left: 850 }}
@@ -94,6 +97,7 @@ const CardComponent: React.FC<CardProps> = ({
         </Card.Body>
       </Card>
       <Card
+        className="hover-test"
         text="white"
         bg="success"
         style={{ width: "18rem", position: "fixed", top: 200, left: 1150 }}
