@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Corona-Bot-Website/static/css/main.7a820f5a.chunk.css",
+    "main.js": "/Corona-Bot-Website/static/js/main.2efe737d.chunk.js",
+    "main.js.map": "/Corona-Bot-Website/static/js/main.2efe737d.chunk.js.map",
+    "runtime-main.js": "/Corona-Bot-Website/static/js/runtime-main.f2358579.js",
+    "runtime-main.js.map": "/Corona-Bot-Website/static/js/runtime-main.f2358579.js.map",
+    "static/css/2.516dffad.chunk.css": "/Corona-Bot-Website/static/css/2.516dffad.chunk.css",
+    "static/js/2.b9151a43.chunk.js": "/Corona-Bot-Website/static/js/2.b9151a43.chunk.js",
+    "static/js/2.b9151a43.chunk.js.map": "/Corona-Bot-Website/static/js/2.b9151a43.chunk.js.map",
+    "index.html": "/Corona-Bot-Website/index.html",
+    "precache-manifest.4f68cc2ac4003fa78619614f2be5b064.js": "/Corona-Bot-Website/precache-manifest.4f68cc2ac4003fa78619614f2be5b064.js",
+    "service-worker.js": "/Corona-Bot-Website/service-worker.js",
+    "static/css/2.516dffad.chunk.css.map": "/Corona-Bot-Website/static/css/2.516dffad.chunk.css.map",
+    "static/css/main.7a820f5a.chunk.css.map": "/Corona-Bot-Website/static/css/main.7a820f5a.chunk.css.map",
+    "static/js/2.b9151a43.chunk.js.LICENSE.txt": "/Corona-Bot-Website/static/js/2.b9151a43.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2358579.js",
+    "static/css/2.516dffad.chunk.css",
+    "static/js/2.b9151a43.chunk.js",
+    "static/css/main.7a820f5a.chunk.css",
+    "static/js/main.2efe737d.chunk.js"
+  ]
+}
