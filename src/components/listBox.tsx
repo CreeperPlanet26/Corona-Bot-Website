@@ -3,11 +3,7 @@ import React, { useState } from "react";
 import { Dropdown, FormControl } from "react-bootstrap";
 import ListBoxProps from "../interfaces/ListBoxProps";
 
-const ListBox: React.FC<ListBoxProps> = ({
-  onFetch,
-  allCountries,
-  colorTheme,
-}) => {
+const ListBox: React.FC<ListBoxProps> = ({ onFetch, allCountries, colorTheme }) => {
   const [value, setValue] = useState("");
 
   const CustomToggle = React.forwardRef(
@@ -25,7 +21,7 @@ const ListBox: React.FC<ListBoxProps> = ({
         {children}
         &#x25bc;
       </a>
-    )
+    ),
   );
 
   const CustomMenu = React.forwardRef(
@@ -38,43 +34,21 @@ const ListBox: React.FC<ListBoxProps> = ({
         <div
           //@ts-ignore
           ref={ref}
-          style={
-            colorTheme === "light"
-              ? { ...style, backgroundColor: "#212529" }
-              : style
-          }
+          style={colorTheme === "light" ? { ...style, backgroundColor: "#212529" } : style}
           className={className}
           aria-labelledby={labeledBy}
         >
-          <FormControl
-            style={
-              colorTheme === "light"
-                ? { backgroundColor: "#212529" }
-                : undefined
-            }
-            autoFocus
-            className="mx-3 my-2 w-auto"
-            placeholder="Type to filter..."
-            onChange={(e) => setValue(e.target.value)}
-            value={value}
-          />
-          <ul
-            className="list-unstyled"
-            style={
-              colorTheme === "light"
-                ? { backgroundColor: "#212529" }
-                : { backgroundColor: "white" }
-            }
-          >
+          <FormControl style={colorTheme === "light" ? { backgroundColor: "#212529" } : undefined} autoFocus className="mx-3 my-2 w-auto" placeholder="Type to filter..." onChange={(e) => setValue(e.target.value)} value={value} />
+          <ul className="list-unstyled" style={colorTheme === "light" ? { backgroundColor: "#212529" } : { backgroundColor: "white" }}>
             {React.Children.toArray(children).filter(
               (child) =>
                 //@ts-ignore
-                !value || child.props.children.toLowerCase().startsWith(value)
+                !value || child.props.children.toLowerCase().startsWith(value),
             )}
           </ul>
         </div>
       );
-    }
+    },
   );
 
   return (
@@ -84,8 +58,10 @@ const ListBox: React.FC<ListBoxProps> = ({
           width: "13rem",
           height: "3rem",
           position: "fixed",
-          top: 450,
-          left: 320,
+          top: "100%",
+          left: "100%",
+          // top: 450,
+          // left: 320,
         }}
         variant="primary"
         id="dropdown-basic"
@@ -96,11 +72,7 @@ const ListBox: React.FC<ListBoxProps> = ({
       <Dropdown.Menu as={CustomMenu}>
         {allCountries.map((e) => (
           <Dropdown.Item
-            style={
-              colorTheme === "light"
-                ? { backgroundColor: "#212529", color: "white" }
-                : { backgroundColor: "white", color: "black" }
-            }
+            style={colorTheme === "light" ? { backgroundColor: "#212529", color: "white" } : { backgroundColor: "white", color: "black" }}
             onClick={(i: any) => {
               setValue((s) => (s = i.target.id));
               onFetch(i.target.id);
