@@ -8,7 +8,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onFetch }) => {
 
   return (
     <div>
-      <Form style={{ width: "56%", position: "fixed", top: 450, left: 550 }}>
+      {/* <Form style={{ width: "56rem", position: "fixed", top: 450, left: 550 }}> */}
+      <Form style={{ width: "896px", position: "fixed", top: 450, left: 550 }}>
         <Form.Group>
           <Form.Control
             // onKeyPress = {e => {
