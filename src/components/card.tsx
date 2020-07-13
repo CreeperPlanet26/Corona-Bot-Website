@@ -4,10 +4,10 @@ import { Card, ProgressBar } from "react-bootstrap";
 
 const CardComponent: React.FC<CardProps> = ({ countryData, worldData, colorTheme }) => {
   //{{ width: "21%", height: "32%", position: "fixed", top: "32%", left: "24%" }}>
-  //18rem
+  //18rem //"310px", height: "200px"
   return (
     <div>
-      <Card className="hover-test" text="white" bg="warning" style={{ width: "21%", height: "32%", position: "fixed", top: "32%", left: "24%" }}>
+      <Card className="hover-test orange" text="white" bg="warning" style={{ width: "310px", height: "200px", position: "fixed", top: "32%", left: "24%" }}>
         <Card.Header>Cases</Card.Header>
         <Card.Body>
           <Card.Title>
@@ -32,7 +32,7 @@ const CardComponent: React.FC<CardProps> = ({ countryData, worldData, colorTheme
         </Card.Body>
       </Card>
 
-      <Card className="hover-test" text="white" bg="danger" style={{ width: "21%", height: "32%", position: "fixed", top: "32%", left: "46%" }}>
+      <Card className="hover-test red" text="white" bg="danger" style={{ width: "310px", height: "200px", position: "fixed", top: "32%", left: "48%" }}>
         <Card.Header>Deaths</Card.Header>
         <Card.Body>
           <Card.Title>
@@ -56,7 +56,7 @@ const CardComponent: React.FC<CardProps> = ({ countryData, worldData, colorTheme
           </Card.Title>
         </Card.Body>
       </Card>
-      <Card className="hover-test" text="white" bg="success" style={{ width: "21%", height: "32%", position: "fixed", top: "32%", left: "68%" }}>
+      <Card className="hover-test green" text="white" bg="success" style={{ width: "310px", height: "200px", position: "fixed", top: "32%", left: "72%" }}>
         <Card.Header>Misc</Card.Header>
         <Card.Body>
           <Card.Title>

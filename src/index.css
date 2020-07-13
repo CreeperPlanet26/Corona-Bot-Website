@@ -10,9 +10,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-@media (min-height: 1920px) {
-  .card-body {
+@media (max-width: 800px) {
+  .orange {
+    top: 40%;
     color: red;
-    background-color: red;
+  }
+  .card-body {
+    top: 40%;
+    position: fixed;
+    background-color: blue;
   }
 }
+
+/* .card-body {
+  top: 100px;
+  left: 100px;
+  color: red;
+  background-color: red;
+} */

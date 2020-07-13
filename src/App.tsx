@@ -50,15 +50,13 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h1 style={{ position: "fixed", top: "15%", left: "45%" }} className={theme === "dark" ? "light" : "dark"}>
+      <NavBar colorTheme={theme} onThemeChange={changeThemeState} />
+      <h1 style={{ position: "fixed", top: "15%", left: "45%" }} className={theme === "dark" ? "light" : "dark "}>
         Corona Stats For: {countryData.country}
       </h1>
-      <NavBar colorTheme={theme} onThemeChange={changeThemeState} />
       <ListBox colorTheme={theme} allCountries={allCountries} onFetch={fetchData} />
-
-      <CardComponent colorTheme={theme} countryData={countryData} worldData={worldData} />
-
       <SearchBar onFetch={fetchData} />
+      <CardComponent colorTheme={theme} countryData={countryData} worldData={worldData} />
     </div>
   );
 };
