@@ -50,7 +50,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h1 style={{ position: "fixed", top: 100, left: 840 }} className={theme === "dark" ? "light" : "dark"}>
+      <h1 style={{ position: "fixed", top: "15%", left: "45%" }} className={theme === "dark" ? "light" : "dark"}>
         Corona Stats For: {countryData.country}
       </h1>
       <NavBar colorTheme={theme} onThemeChange={changeThemeState} />

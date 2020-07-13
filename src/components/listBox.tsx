@@ -55,11 +55,11 @@ const ListBox: React.FC<ListBoxProps> = ({ onFetch, allCountries, colorTheme }) 
     <Dropdown>
       <Dropdown.Toggle
         style={{
-          width: "13rem",
-          height: "3rem",
+          width: "13%",
+          height: "8%",
           position: "fixed",
-          top: "100%",
-          left: "100%",
+          top: "71%",
+          left: "6.5%",
           // top: 450,
           // left: 320,
         }}

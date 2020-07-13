@@ -2,43 +2,23 @@ import React from "react";
 import CardProps from "../interfaces/cardProps";
 import { Card, ProgressBar } from "react-bootstrap";
 
-const CardComponent: React.FC<CardProps> = ({
-  countryData,
-  worldData,
-  colorTheme,
-}) => {
+const CardComponent: React.FC<CardProps> = ({ countryData, worldData, colorTheme }) => {
+  //{{ width: "21%", height: "32%", position: "fixed", top: "32%", left: "24%" }}>
+  //18rem
   return (
     <div>
-      <Card
-        className="hover-test"
-        text="white"
-        bg="warning"
-        style={{ width: "18rem", position: "fixed", top: 200, left: 550 }}
-      >
+      <Card className="hover-test" text="white" bg="warning" style={{ width: "21%", height: "32%", position: "fixed", top: "32%", left: "24%" }}>
         <Card.Header>Cases</Card.Header>
         <Card.Body>
           <Card.Title>
-            <h5
-              style={
-                colorTheme === "dark" ? { color: "white" } : { color: "black" }
-              }
-            >
-              Cases: {countryData.cases}
-            </h5>
+            <h5 style={colorTheme === "dark" ? { color: "white" } : { color: "black" }}>Cases: {countryData.cases}</h5>
             <ProgressBar
               now={
                 //@ts-ignore
                 (parseInt(countryData.cases) / parseInt(worldData.cases)) * 300
               }
             />
-            <h5
-              style={
-                colorTheme === "dark" ? { color: "white" } : { color: "black" }
-              }
-            >
-              {" "}
-              Today: {countryData.todayCases}
-            </h5>
+            <h5 style={colorTheme === "dark" ? { color: "white" } : { color: "black" }}> Today: {countryData.todayCases}</h5>
             <ProgressBar
               now={
                 //@ts-ignore
@@ -52,38 +32,18 @@ const CardComponent: React.FC<CardProps> = ({
         </Card.Body>
       </Card>
 
-      <Card
-        className="hover-test"
-        text="white"
-        bg="danger"
-        style={{ width: "18rem", position: "fixed", top: 200, left: 850 }}
-      >
+      <Card className="hover-test" text="white" bg="danger" style={{ width: "21%", height: "32%", position: "fixed", top: "32%", left: "46%" }}>
         <Card.Header>Deaths</Card.Header>
         <Card.Body>
           <Card.Title>
-            <h5
-              style={
-                colorTheme === "dark" ? { color: "white" } : { color: "black" }
-              }
-            >
-              {" "}
-              Deaths: {countryData.deaths}
-            </h5>
+            <h5 style={colorTheme === "dark" ? { color: "white" } : { color: "black" }}> Deaths: {countryData.deaths}</h5>
             <ProgressBar
               now={
                 //@ts-ignore
-                (parseInt(countryData.deaths) / parseInt(worldData.deaths)) *
-                300
+                (parseInt(countryData.deaths) / parseInt(worldData.deaths)) * 300
               }
             />
-            <h5
-              style={
-                colorTheme === "dark" ? { color: "white" } : { color: "black" }
-              }
-            >
-              {" "}
-              Today: {countryData.todayDeaths}
-            </h5>
+            <h5 style={colorTheme === "dark" ? { color: "white" } : { color: "black" }}> Today: {countryData.todayDeaths}</h5>
             <ProgressBar
               now={
                 //@ts-ignore
@@ -96,22 +56,11 @@ const CardComponent: React.FC<CardProps> = ({
           </Card.Title>
         </Card.Body>
       </Card>
-      <Card
-        className="hover-test"
-        text="white"
-        bg="success"
-        style={{ width: "18rem", position: "fixed", top: 200, left: 1150 }}
-      >
+      <Card className="hover-test" text="white" bg="success" style={{ width: "21%", height: "32%", position: "fixed", top: "32%", left: "68%" }}>
         <Card.Header>Misc</Card.Header>
         <Card.Body>
           <Card.Title>
-            <h5
-              style={
-                colorTheme === "dark" ? { color: "white" } : { color: "black" }
-              }
-            >
-              Recovered: {countryData.recovered}
-            </h5>
+            <h5 style={colorTheme === "dark" ? { color: "white" } : { color: "black" }}>Recovered: {countryData.recovered}</h5>
             <ProgressBar
               now={
                 //@ts-ignore
@@ -122,13 +71,7 @@ const CardComponent: React.FC<CardProps> = ({
               }
             />
 
-            <h5
-              style={
-                colorTheme === "dark" ? { color: "white" } : { color: "black" }
-              }
-            >
-              Tests: {countryData.totalTests}
-            </h5>
+            <h5 style={colorTheme === "dark" ? { color: "white" } : { color: "black" }}>Tests: {countryData.totalTests}</h5>
             <ProgressBar
               now={
                 //@ts-ignore
