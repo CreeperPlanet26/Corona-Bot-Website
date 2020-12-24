@@ -13,7 +13,10 @@ const NavBar: React.FC<NavBarProps> = ({ onThemeChange, colorTheme }) => {
 
   return (
     <>
-      <Navbar bg={colorTheme === "dark" ? "light" : "dark"} variant={colorTheme === "dark" ? "light" : "dark"}>
+      <Navbar
+        bg={colorTheme === "dark" ? "light" : "dark"}
+        variant={colorTheme === "dark" ? "light" : "dark"}
+      >
         <Navbar.Brand> Corona Bot</Navbar.Brand>
 
         <Form inline>
@@ -72,7 +75,10 @@ const NavBar: React.FC<NavBarProps> = ({ onThemeChange, colorTheme }) => {
             <Modal.Header closeButton>
               <Modal.Title>How To Use</Modal.Title>
             </Modal.Header>
-            <Modal.Body>Use the search bar to enter a country name or you can use the Country button dropdown to select a country from the list.</Modal.Body>
+            <Modal.Body>
+              Use the search bar to enter a country name or you can use the
+              Country button dropdown to select a country from the list.
+            </Modal.Body>
             <Modal.Footer>
               <Button variant="primary" onClick={handleClose}>
                 Close

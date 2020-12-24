@@ -18,7 +18,9 @@ const App: React.FC = () => {
   if (theme === "light") document.body.style.backgroundColor = "white";
 
   const fetchAllCountries = async () => {
-    const responce = await fetch(`https://coronavirus-19-api.herokuapp.com/countries/`);
+    const responce = await fetch(
+      `https://coronavirus-19-api.herokuapp.com/countries/`
+    );
     const allCountriesJSON = await responce.json();
     setAllCountries((s) => (s = allCountriesJSON));
   };
@@ -29,14 +31,18 @@ const App: React.FC = () => {
   }, []);
 
   const fetchData = async (searchQuery: string) => {
-    const parsed = searchQuery.replace(/\s+/g, "%20");
-    const responce = await fetch(`https://coronavirus-19-api.herokuapp.com/countries/${parsed}`);
+    const parsed = searchQuery.replace(/\s+/gi, "%20");
+    const responce = await fetch(
+      `https://coronavirus-19-api.herokuapp.com/countries/${parsed}`
+    );
     const countryDataJSON = await responce.json();
     setCountryData((s) => (s = countryDataJSON));
   };
 
   const fetchWorldData = async () => {
-    const responce = await fetch(`https://coronavirus-19-api.herokuapp.com/countries/world`);
+    const responce = await fetch(
+      `https://coronavirus-19-api.herokuapp.com/countries/world`
+    );
     const worldDataJSON = await responce.json();
     setWorldData((s) => (s = worldDataJSON));
   };
@@ -51,12 +57,26 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <NavBar colorTheme={theme} onThemeChange={changeThemeState} />
-      <h1 style={{ position: "fixed", top: "15%", left: "45%" }} className={theme === "dark" ? "light" : "dark "}>
+      <h1
+        style={{ marginTop: "1rem" }}
+        className={theme === "dark" ? "light" : "dark"}
+      >
         Corona Stats For: {countryData.country}
       </h1>
-      <ListBox colorTheme={theme} allCountries={allCountries} onFetch={fetchData} />
+
+      <CardComponent
+        colorTheme={theme}
+        countryData={countryData}
+        worldData={worldData}
+      />
+
+      <ListBox
+        colorTheme={theme}
+        allCountries={allCountries}
+        onFetch={fetchData}
+      />
+
       <SearchBar onFetch={fetchData} />
-      <CardComponent colorTheme={theme} countryData={countryData} worldData={worldData} />
     </div>
   );
 };
